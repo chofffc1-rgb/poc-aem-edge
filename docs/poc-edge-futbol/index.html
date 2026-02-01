@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ofertas Fútbol — EDS Site</title>
+  <meta name="description" content="Descubre las mejores ofertas y experiencias de fútbol. Entradas, paquetes exclusivos y más." />
+
+  <!-- Preconnect a fuentes externas (performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!--
+    RUTAS: Esta page vive en docs/poc-edge-futbol/
+    Los bloques y styles viven en la raíz del repo.
+    Por tanto las rutas sube dos niveles: ../../
+    
+    En producción EDS el runtime resuelve esto automáticamente.
+    En desarrollo local con aem CLI funciona igual con estas rutas relativas.
+  -->
+  <link rel="stylesheet" href="../../styles/styles.css" />
+  <link rel="stylesheet" href="../../blocks/hero-banner/hero-banner.css" />
+  <link rel="stylesheet" href="../../blocks/carousel/carousel.css" />
+  <link rel="stylesheet" href="../../blocks/faq/faq.css" />
+</head>
+<body>
+
+  <!-- ================================================
+       BLOQUE 1: Hero Banner
+       En EDS, este contenido vendría de Google Docs/SharePoint.
+       Aquí lo escribimos directamente para desarrollo local.
+       ================================================ -->
+  <div class="hero-banner">
+    <div class="hero-banner-bg" aria-hidden="true"></div>
+    <div class="hero-banner-overlay" aria-hidden="true"></div>
+    <div class="hero-banner-content">
+      <div class="section-inner">
+        <h1 class="hero-banner-title">La Pasión<br>del Balón</h1>
+        <p class="hero-banner-subtitle">Revivir los grandes momentos del fútbol mundial con ofertas exclusivas</p>
+        <a href="#ofertas" class="hero-banner-cta" role="button">
+          Ver Ofertas
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-banner-scroll-hint" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ================================================
+       BLOQUE 2: Carousel de Ofertas
+       ================================================ -->
+  <section class="carousel" id="ofertas" aria-label="Ofertas destacadas">
+    <div class="section-inner">
+      <div class="carousel-header">
+        <h2 class="section-title">Ofertas <span>Destacadas</span></h2>
+        <div class="accent-line"></div>
+      </div>
+
+      <div class="carousel-wrapper" role="region" aria-label="Carrusel de ofertas">
+        <button class="carousel-btn carousel-btn--prev" aria-label="Ofertas anteriores" disabled>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            <article class="carousel-card" tabindex="0">
+              <div class="carousel-card-img" style="background-image: url('https://images.unsplash.com/photo-1518605158824-177a477eb1dd?w=600&q=80')"></div>
+              <div class="carousel-card-body">
+                <span class="carousel-card-tag">Liga</span>
+                <h3 class="carousel-card-title">El Clásico Revivido</h3>
+                <p class="carousel-card-desc">Entrada preferente + zona VIP en el estadio Santiago Bernabéu.</p>
+                <div class="carousel-card-footer">
+                  <span class="carousel-card-price">€149</span>
+                  <span class="carousel-card-price-old">€220</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-card" tabindex="0">
+              <div class="carousel-card-img" style="background-image: url('https://images.unsplash.com/photo-1504215569694-182d3a65008f?w=600&q=80')"></div>
+              <div class="carousel-card-body">
+                <span class="carousel-card-tag">Champions</span>
+                <h3 class="carousel-card-title">Noche Europea</h3>
+                <p class="carousel-card-desc">Paquete para 2 personas con vuelo + hotel + entrada a semifinal.</p>
+                <div class="carousel-card-footer">
+                  <span class="carousel-card-price">€890</span>
+                  <span class="carousel-card-price-old">€1.200</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-card" tabindex="0">
+              <div class="carousel-card-img" style="background-image: url('https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=600&q=80')"></div>
+              <div class="carousel-card-body">
+                <span class="carousel-card-tag">Experiencia</span>
+                <h3 class="carousel-card-title">Visita al Vestuario</h3>
+                <p class="carousel-card-desc">Tour exclusivo del estadio incluyendo acceso al vestuario y zona de calentamiento.</p>
+                <div class="carousel-card-footer">
+                  <span class="carousel-card-price">€75</span>
+                  <span class="carousel-card-price-old">€110</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-card" tabindex="0">
+              <div class="carousel-card-img" style="background-image: url('https://images.unsplash.com/photo-1529551212027-346ec748a148?w=600&q=80')"></div>
+              <div class="carousel-card-body">
+                <span class="carousel-card-tag">Retro</span>
+                <h3 class="carousel-card-title">Camiseta Histórica</h3>
+                <p class="carousel-card-desc">Camiseta retro de edición limitada con autógrafo de leyenda del club.</p>
+                <div class="carousel-card-footer">
+                  <span class="carousel-card-price">€199</span>
+                  <span class="carousel-card-price-old">€299</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-card" tabindex="0">
+              <div class="carousel-card-img" style="background-image: url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80')"></div>
+              <div class="carousel-card-body">
+                <span class="carousel-card-tag">Entrenamiento</span>
+                <h3 class="carousel-card-title">Sesión con Pro</h3>
+                <p class="carousel-card-desc">Sesión de entrenamiento individual con un ex jugador profesional de 90 minutos.</p>
+                <div class="carousel-card-footer">
+                  <span class="carousel-card-price">€55</span>
+                  <span class="carousel-card-price-old">€90</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="carousel-card" tabindex="0">
+              <div class="carousel-card-img" style="background-image: url('https://images.unsplash.com/photo-1544145945-f90425340c7e?w=600&q=80')"></div>
+              <div class="carousel-card-body">
+                <span class="carousel-card-tag">Final</span>
+                <h3 class="carousel-card-title">Final de Copa</h3>
+                <p class="carousel-card-desc">Entrada tribune lateral + paquete gastro pre-partido en zona exclusiva.</p>
+                <div class="carousel-card-footer">
+                  <span class="carousel-card-price">€340</span>
+                  <span class="carousel-card-price-old">€480</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button class="carousel-btn carousel-btn--next" aria-label="Ofertas siguientes">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="carousel-dots" aria-label="Indicadores de posición" role="tablist"></div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       BLOQUE 3: FAQ Colapsable
+       ================================================ -->
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="section-inner">
+      <div class="faq-header">
+        <h2 class="section-title" id="faq-title">Preguntas <span>Frecuentes</span></h2>
+        <div class="accent-line"></div>
+        <p class="faq-subtitle">Todo lo que necesitas saber sobre el fútbol</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-question-text">¿Cuántos títulos de Champions League ha ganado el Real Madrid?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>El Real Madrid es el club más laureado en la historia de la competición, con <strong>15 títulos</strong> de Champions League. Su primera victoria fue en 1956 y el más reciente fue en 2024, cuando derrotaron a Borussia Dortmund en la final celebrada en Wembley.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-question-text">¿Qué significa la regla del gol de visitante?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>Era una regla que se aplicaba en eliminatorias a dos manos. Si ambos equipos terminaban con el mismo marcador agregado, avanzaba el que había anotado más goles como <strong>visitante</strong>. La FIFA la eliminó en 2021 para que los empates se resuelvan con tiempo extra y penales.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-question-text">¿Por qué los jugadores se arrodillan antes de los partidos?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>Este gesto se popularizó en 2020 como señal de <strong>solidaridad con el movimiento Black Lives Matter</strong>. Los jugadores se posan sobre una rodilla antes del silbato inicial para mostrar su compromiso con la igualdad racial y contra la discriminación.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-question-text">¿Cómo funciona el sistema de puntos de una liga?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>Cada equipo juega contra todos los demás <strong>dos veces</strong> (ida y vuelta). Por cada victoria se otorgan 3 puntos, por cada empate 1 punto, y por cada derrota 0. Al final de la temporada, el equipo con más puntos es el campeón. En igualdad, se desempata por diferencia de goles.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span class="faq-question-text">¿Qué es el VAR y cuándo se implementó?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+              <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg>
+            </span>
+          </summary>
+          <div class="faq-answer">
+            <p>El <strong>VAR (Video Assistant Referee)</strong> es un sistema de revisión en vídeo que permite a un árbitro asistente revisar decisiones clave desde una sala de control. Se implementó oficialmente en la FIFA World Cup 2018 en Rusia y solo se activa en cuatro situaciones: goles, penales, tarjetas rojas y errores de identidad.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SCRIPTS — Carga de bloques
+       En EDS producción, el runtime carga automáticamente
+       el JS de cada bloque según las clases detectadas.
+       Aquí lo hacemos manualmente para desarrollo local.
+       ================================================ -->
+  <script type="module">
+    // Importa y ejecuta cada bloque pasándole su elemento raíz
+    import heroBanner from '../../blocks/hero-banner/hero-banner.js';
+    import carousel   from '../../blocks/carousel/carousel.js';
+    import faq        from '../../blocks/faq/faq.js';
+
+    // Ejecuta cuando el DOM esté listo
+    document.addEventListener('DOMContentLoaded', () => {
+      const heroEl    = document.querySelector('.hero-banner');
+      const carouselEl = document.querySelector('.carousel');
+      const faqEl     = document.querySelector('.faq');
+
+      if (heroEl)     heroBanner(heroEl);
+      if (carouselEl) carousel(carouselEl);
+      if (faqEl)      faq(faqEl);
+    });
+  </script>
+
+</body>
+</html>

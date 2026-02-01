@@ -1,0 +1,127 @@
+<!--
+  BLOQUE: faq
+  Uso en el doc de contenido:
+
+  | faq                                     |
+  | Título de la sección                    |
+  | Pregunta 1                              |
+  | Respuesta 1                             |
+  | Pregunta 2                              |
+  | Respuesta 2                             |
+  | ...                                     |
+
+  Cada par de filas = 1 pregunta/respuesta.
+
+  Nota técnica: Usamos <details>/<summary> nativos del HTML.
+  Esto nos da:
+    - Comportamiento colapsable sin JS obligatorio (progressive enhancement).
+    - Accesibilidad integrada por el navegador.
+    - El JS solo añade animación de altura suave (enhancement, no requirement).
+-->
+
+<section class="faq" aria-labelledby="faq-title">
+  <div class="section-inner">
+
+    <!-- Header -->
+    <div class="faq-header">
+      <h2 class="section-title" id="faq-title">Preguntas <span>Frecuentes</span></h2>
+      <div class="accent-line"></div>
+      <p class="faq-subtitle">Todo lo que necesitas saber sobre el fútbol</p>
+    </div>
+
+    <!-- Lista de preguntas -->
+    <div class="faq-list">
+
+      <!-- FAQ 1 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-question-text">¿Cuántos títulos de Champions League ha ganado el Real Madrid?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M5 12h14"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>El Real Madrid es el club más laureado en la historia de la competición, con <strong>15 títulos</strong> de Champions League (antigua Copa de Europa). Su primera victoria fue en 1956 y el más reciente fue en 2024, cuando derrotaron a Borussia Dortmund en la final celebrada en Wembley.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 2 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-question-text">¿Qué significa la regla del gol de visitante?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M5 12h14"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Era una regla que se aplicaba en eliminatorias a dos manos (ida y vuelta). Si ambos equipos terminaban con el mismo marcador agregado, el equipo que había anotado más goles como <strong>visitante</strong> avanzaba. Sin embargo, la FIFA eliminó esta regla en 2021 para que las eliminatorias se resuelvan con tiempo extra y penales si sigue empate.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 3 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-question-text">¿Por qué los jugadores se arrodillan antes de los partidos?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M5 12h14"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>Este gesto se popularizó en 2020 como señal de <strong>solidaridad con el movimiento Black Lives Matter</strong>. Los jugadores se posan sobre una rodilla antes del silbato inicial para mostrar su compromiso con la igualdad racial y contra la discriminación. Aunque su frecuencia ha disminuido desde entonces, algunos equipos y jugadores siguen manteniéndolo como símbolo.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 4 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-question-text">¿Cómo funciona el sistema de puntos de una liga?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M5 12h14"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>En la mayoría de ligas europeas, cada equipo juega contra todos los demás <strong>dos veces</strong> (ida y vuelta). Por cada victoria se otorgan 3 puntos, por cada empate 1 punto, y por cada derrota 0. Al final de la temporada, el equipo con más puntos acumulados es el campeón. En caso de igualdad, el desempate se resuelve por diferencia de goles.</p>
+        </div>
+      </details>
+
+      <!-- FAQ 5 -->
+      <details class="faq-item">
+        <summary class="faq-question">
+          <span class="faq-question-text">¿Qué es el VAR y cuándo se implementó?</span>
+          <span class="faq-icon" aria-hidden="true">
+            <svg class="faq-icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M12 5v14M5 12h14"/>
+            </svg>
+            <svg class="faq-icon-minus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <path d="M5 12h14"/>
+            </svg>
+          </span>
+        </summary>
+        <div class="faq-answer">
+          <p>El <strong>VAR (Video Assistant Referee)</strong> es un sistema de revisión en vídeo que permite a un árbitro asistente revisar decisiones clave desde una sala de control. Se implementó oficialmente en la FIFA World Cup 2018 en Rusia. Solo se activa en cuatro situaciones: goles, penales, tarjetas rojas directas y errores de identidad. Su objetivo es reducir errores arbitrales de alto impacto.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>

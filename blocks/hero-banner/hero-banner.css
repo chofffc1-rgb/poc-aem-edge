@@ -1,0 +1,177 @@
+/* ============================================
+   BLOQUE: hero-banner
+   Responsabilidad: Layout hero full-width,
+   imagen de fondo, overlay, animaciones
+   de entrada, botón CTA y scroll hint.
+   ============================================ */
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;                        /* Ocupa toda la altura del viewport */
+  min-height: 100dvh;                       /* dvh más fiable en mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* --- Imagen de fondo --- */
+.hero-banner-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1542908933-3c73d8144af2?w=1920&q=80');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  /* Zoom sutil al cargar */
+  animation: hero-zoom 8s ease-out forwards;
+  will-change: transform;
+}
+
+@keyframes hero-zoom {
+  0%   { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* --- Overlay gradiente (legibilidad) --- */
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.55) 40%,
+    rgba(0, 0, 0, 0.8) 75%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  z-index: 1;
+}
+
+/* --- Contenido --- */
+.hero-banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 0 80px;                        /* Espacio inferior para scroll hint */
+}
+
+.hero-banner-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #fff;
+  /* Animación de entrada escalonada */
+  opacity: 0;
+  transform: translateY(28px);
+  animation: hero-fade-up 0.7s 0.15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.hero-banner-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  margin-top: 14px;
+  max-width: 520px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: hero-fade-up 0.6s 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* --- CTA Button --- */
+.hero-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 14px 28px;
+  background: var(--color-accent);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  letter-spacing: 0.03em;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: hero-fade-up 0.55s 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.hero-banner-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.15) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-mid);
+}
+
+.hero-banner-cta:hover {
+  background: #c9303c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.35);
+}
+
+.hero-banner-cta:hover::before {
+  opacity: 1;
+}
+
+.hero-banner-cta svg {
+  transition: transform var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner-cta:hover svg {
+  transform: translateX(4px);
+}
+
+.hero-banner-cta span,
+.hero-banner-cta:not(svg) {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Animación reutilizable --- */
+@keyframes hero-fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Scroll Hint --- */
+.hero-banner-scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.5);
+  animation: scroll-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.5; }
+  50%      { transform: translateX(-50%) translateY(8px); opacity: 1; }
+}
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .hero-banner-content {
+    padding-bottom: 60px;
+  }
+
+  .hero-banner-cta {
+    padding: 12px 22px;
+    font-size: 0.9rem;
+  }
+}

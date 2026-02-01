@@ -1,0 +1,56 @@
+<!--
+  BLOQUE: hero-banner
+  Uso en el doc de contenido (Google Docs/SharePoint):
+  
+  | hero-banner                                          |
+  | Título principal del héroe                           |
+  | Subtítulo o descripción breve                        |
+  | URL de la imagen de fondo (o ruta local /images/...) |
+  | Texto del botón CTA                                  |
+  | URL del botón CTA                                    |
+
+  Ejemplo real:
+  | hero-banner                                                        |
+  | La Pasión del Balón                                                |
+  | Revivir los grandes momentos del fútbol mundial                   |
+  | https://unsplash.com/photos/football-stadium.jpg                  |
+  | Ver Ofertas                                                        |
+  | #ofertas                                                           |
+-->
+
+<div class="hero-banner">
+  <div class="hero-banner-bg" aria-hidden="true">
+    <!--
+      La imagen de fondo se inyecta por JS desde el dato del contenedor.
+      En desarrollo local puedes usar cualquier imagen.
+      En producción, apunta a una imagen optimizada en tu DAM (Adobe Asset Optimization).
+    -->
+  </div>
+
+  <!-- Overlay gradiente para legibilidad del texto -->
+  <div class="hero-banner-overlay" aria-hidden="true"></div>
+
+  <!-- Contenido semántico -->
+  <div class="hero-banner-content">
+    <div class="section-inner">
+      <h1 class="hero-banner-title">La Pasión del Balón</h1>
+      <p class="hero-banner-subtitle">
+        Revivir los grandes momentos del fútbol mundial
+      </p>
+      <a href="#ofertas" class="hero-banner-cta" role="button">
+        Ver Ofertas
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Indicador de scroll -->
+  <div class="hero-banner-scroll-hint" aria-hidden="true">
+    <span class="sr-only">Desplazarse hacia abajo</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</div>
